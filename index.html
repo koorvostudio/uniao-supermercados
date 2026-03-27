@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União Supermercados</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <span>📍 Encontre a loja mais próxima</span>
+                <div class="top-links">
+                    <a href="#">Trabalhe Conosco</a>
+                    <a href="#">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="container navbar">
+                <div class="logo">
+                    <img src="/assets/images/logo.png" alt="União Supermercados">
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="O que você procura hoje?">
+                    <button type="submit">🔍</button>
+                </div>
+
+                <nav class="menu-nav j_mobile_menu">
+                    <ul class="nav-list">
+                        <li><a href="#ofertas" class="active">Ofertas</a></li>
+                        <li><a href="#lojas">Lojas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#encarte" class="button rounded small btn-flyer">Encarte Digital</a></li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-menu-toggle j_mobile_menu_icon" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <span class="hero-tag button rounded small disabled">Ofertas da Semana</span>
+                    <h1>Qualidade que você conhece, <br><span>preço que você ama.</span></h1>
+                    <p>Confira nossa seleção exclusiva de produtos com descontos imbatíveis para o seu dia a dia.</p>
+                    <div class="hero-actions">
+                        <a href="#ofertas" class="button">Ver Ofertas</a>
+                        <a href="#lojas" class="button secondary">Nossas Lojas</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card">
+                        <strong>-30%</strong>
+                        <span>em hortifruti</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80"
+                        alt="Produtos frescos União">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <div class="categories-grid">
+                    <div class="category-item selected">
+                        <div class="cat-icon">🐟</div>
+                        <span>Segunda do Peixe</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="cat-icon">🥩</div>
+                        <span>Terça e Quarta da Carne</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="cat-icon">🥦</div>
+                        <span>Quinta e Sexta da Verdura</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="cat-icon">🛒</div>
+                        <span>Ofertas de Fim de Semana</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2 class="section-title">Ofertas em Destaque</h2>
+
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="badge">Oferta</div>
+                        <img src="http://www.uniaosupermercados.com/img/produto/20240803042053.jpg"
+                            alt="Açucar Demerara União 1KG">
+                        <div class="product-info">
+                            <span class="category">Mercearia</span>
+                            <h3 class="product-name">Açucar Demerara União 1KG</h3>
+                            <p class="price">R$ 0,00</p>
+                            <button class="button secondary small">Ver Oferta</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="http://www.uniaosupermercados.com/img/produto/20251031014945.jpg"
+                            alt="Amaciante Oeste 2L">
+                        <div class="product-info">
+                            <span class="category">Limpeza</span>
+                            <h3 class="product-name">Amaciante Oeste 2L</h3>
+                            <p class="price">R$ 0,00</p>
+                            <button class="button secondary small">Ver Oferta</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="badge">Novo</div>
+                        <img src="http://www.uniaosupermercados.com/img/produto/20251031013958.jpg"
+                            alt="Biscoito Maltado Piraquê 80G">
+                        <div class="product-info">
+                            <span class="category">Snacks</span>
+                            <h3 class="product-name">Biscoito Maltado Piraquê 80G</h3>
+                            <p class="price">R$ 0,00</p>
+                            <button class="button secondary small">Ver Oferta</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="http://www.uniaosupermercados.com/img/produto/20240302101407.png"
+                            alt="Extrato De Tomate Salsaretti 300G">
+                        <div class="product-info">
+                            <span class="category">Enlatados</span>
+                            <h3 class="product-name">Extrato De Tomate Salsaretti 300G</h3>
+                            <p class="price">R$ 0,00</p>
+                            <button class="button secondary small">Ver Oferta</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="flyer" id="encarte">
+            <div class="container">
+                <div class="flyer-header">
+                    <h2 class="section-title">Encarte da Semana</h2>
+                    <p>Ofertas válidas de 23/03 a 30/03 ou enquanto durarem os estoques.</p>
+                </div>
+
+                <div class="flyer-container">
+                    <button class="flyer-nav prev" aria-label="Página Anterior">❮</button>
+
+                    <div class="flyer-viewer">
+                        <div class="flyer-page active">
+                            <img src="https://via.placeholder.com/800x1100/f3f3f3/6a1b9a?text=Capa+Encarte+União"
+                                alt="Capa do Encarte">
+                            <div class="flyer-overlay">
+                                <span class="zoom-icon">🔍 Clique para ampliar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="flyer-nav next" aria-label="Próxima Página">❯</button>
+                </div>
+
+                <div class="flyer-actions">
+                    <a href="#" class="btn-download">
+                        <span class="icon">📥</span> Baixar Encarte Completo (PDF)
+                    </a>
+                    <p class="disclaimer">*Preços válidos para as unidades de Mogi das Cruzes e região.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="module" src="/assets/scripts/script.js"></script>
+</body>
+
+</html>
