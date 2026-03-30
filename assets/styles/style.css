@@ -579,7 +579,6 @@ li {
 /* SEÇÃO DE LOCALIZADOR */
 .locator {
     padding: 60px 0;
-    background: var(--color-white);
 }
 
 .locator-wrapper {
@@ -690,6 +689,15 @@ li {
     margin-bottom: 20px;
 }
 
+.footer-brand .social-links svg {
+    height: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.footer-brand .social-links svg:hover {
+    color: var(--color-accent);
+}
+
 .footer-grid h4 {
     margin-bottom: 25px;
     font-size: 1.1rem;
@@ -721,11 +729,23 @@ li {
     gap: 10px;
 }
 
+.footer-contact a {
+    transition: 0.3s;
+}
+
+.footer-contact a:hover {
+    color: var(--color-white);
+}
+
 .payment-methods {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+}
+
+.payment-methods img {
+    height: 24px;
 }
 
 .footer-bottom {
