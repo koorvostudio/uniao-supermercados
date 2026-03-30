@@ -442,6 +442,12 @@ li {
     color: var(--color-text);
 }
 
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .product-info .price {
     font-size: 1.4rem;
     font-weight: 800;
@@ -450,7 +456,9 @@ li {
 }
 
 .product-info .button {
-    width: 100%;
+    display: block;
+    justify-self: flex-end;
+    margin-top: auto;
 }
 
 /* SEÇÃO DE ENCARTE */
