@@ -1,4 +1,7 @@
-const menuBtn = document.querySelector(".j_mobile_menu_icon");
-const navMenu = document.querySelector('.j_mobile_menu');
+import Header, { ChangeHeaderBehavior } from "./header.js";
 
-menuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+Header();
+
+window.addEventListener('scroll', () => {
+    ChangeHeaderBehavior();
+});

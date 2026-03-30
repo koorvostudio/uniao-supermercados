@@ -128,7 +128,15 @@ li {
     color: var(--color-white);
     font-size: 0.75rem;
     padding: 8px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
     display: none;
+    max-height: 32px;
+}
+
+.main-header.scrolling .top-bar {
+    max-height: 0;
+    padding: 0;
 }
 
 .top-bar .container {
@@ -150,6 +158,11 @@ li {
 .nav-container {
     background: var(--color-white);
     padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.main-header.scrolling .nav-container {
+    padding-block: 8px;
 }
 
 .navbar {
@@ -183,16 +196,16 @@ li {
 .menu-nav {
     position: fixed;
     top: 0;
-    left: -100%;
+    right: -100%;
     width: 100%;
     height: 100vh;
-    background: var(--color-white);
+    background: var(--color-secondary);
     transition: 0.4s;
     padding: 130px 20px 40px 20px;
 }
 
 .menu-nav.active {
-    left: 0;
+    right: 0;
 }
 
 .nav-list {
@@ -209,7 +222,7 @@ li {
 .nav-list a {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .nav-list .btn-flyer {
@@ -231,19 +244,22 @@ li {
     height: 3px;
     background: var(--color-primary);
     border-radius: 2px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .menu-nav.active~.mobile-menu-toggle .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
+    background: var(--color-white);
 }
 
 .menu-nav.active~.mobile-menu-toggle .bar:nth-child(2) {
     opacity: 0;
+    background: var(--color-white);
 }
 
 .menu-nav.active~.mobile-menu-toggle .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -6px);
+    background: var(--color-white);
 }
 
 /* SEÇÃO HERO */
@@ -276,6 +292,11 @@ li {
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+.hero-tag:hover {
+    background: rgba(81, 45, 168, 0.1) !important;
+    color: var(--color-primary) !important;
 }
 
 .hero-content h1 {
@@ -354,6 +375,7 @@ li {
     gap: 10px;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
 }
 
 .cat-icon {
