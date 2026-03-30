@@ -660,6 +660,10 @@ li {
     align-items: flex-start;
 }
 
+.locator-item:hover {
+    border-color: var(--color-primary);
+}
+
 .locator-item.active {
     border-color: var(--color-primary);
     background: rgba(81, 45, 168, 0.02);
@@ -843,6 +847,7 @@ li {
 
     .nav-list a {
         font-size: 1rem;
+        color: var(--color-text);
     }
 
     .hero-wrapper {
