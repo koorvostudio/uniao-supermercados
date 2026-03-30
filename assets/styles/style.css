@@ -106,6 +106,10 @@ img {
     padding-left: 15px;
 }
 
+.section-title.centered {
+    text-align: center;
+}
+
 /* SEÇÃO HEADER */
 .main-header {
     width: 100%;
@@ -191,7 +195,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    text-align: center;
+    align-items: center;
 }
 
 .nav-list li {
@@ -226,15 +230,15 @@ img {
     transition: 0.3s;
 }
 
-.menu-nav.active ~ .mobile-menu-toggle .bar:nth-child(1) {
+.menu-nav.active~.mobile-menu-toggle .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
 }
 
-.menu-nav.active ~ .mobile-menu-toggle .bar:nth-child(2) {
+.menu-nav.active~.mobile-menu-toggle .bar:nth-child(2) {
     opacity: 0;
 }
 
-.menu-nav.active ~ .mobile-menu-toggle .bar:nth-child(3) {
+.menu-nav.active~.mobile-menu-toggle .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
@@ -421,7 +425,7 @@ img {
     margin-bottom: 15px;
 }
 
-.product-card .category {
+.product-info .category {
     font-size: 0.75rem;
     color: #636e72;
     text-transform: uppercase;
@@ -431,17 +435,236 @@ img {
 .product-name {
     font-size: 1rem;
     margin: 8px 0;
-    color: var(--text-main);
+    color: var(--color-text);
 }
 
-.product-card .price {
-    font-size: 1.25rem;
+.product-info .price {
+    font-size: 1.4rem;
     font-weight: 800;
     color: var(--color-primary);
     margin-bottom: 15px;
 }
 
+.product-info .button {
+    width: 100%;
+}
+
+/* SEÇÃO DE ENCARTE */
+.flyer {
+    padding: 80px 0;
+    background-color: #fdfdfd;
+}
+
+.flyer-wrapper {
+    max-width: 560px;
+}
+
+.flyer-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.flyer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.flyer-viewer {
+    background: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: zoom-in;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.flyer-viewer:hover {
+    transform: scale(1.01);
+}
+
+.flyer-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+.flyer-nav {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(81, 45, 168, 0.3);
+    position: absolute;
+    z-index: 10;
+}
+
+.flyer-nav:hover {
+    transform: scale(1.1);
+}
+
+.flyer-nav.prev {
+    left: 10px;
+}
+
+.flyer-nav.next {
+    right: 10px;
+}
+
+.flyer-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+    -webkit-text-wrap: nowrap;
+    text-wrap: nowrap;
+}
+
+.flyer-viewer:hover .flyer-overlay {
+    opacity: 1;
+}
+
+.flyer-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.flyer-actions .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #27ae60;
+    /* Verde para remeter a download/segurança */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(39, 174, 96, 0.2);
+}
+
+.flyer-actions .btn-download:hover {
+    background: #219150;
+    transform: translateY(-2px);
+}
+
+.flyer-actions .disclaimer {
+    margin-top: 15px;
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* SEÇÃO DE LOCALIZADOR */
+.locator {
+    padding: 60px 0;
+    background: var(--color-white);
+}
+
+.locator-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.locator-map {
+    flex: 1.5;
+    height: 100%;
+}
+
+.locator-map .map-placeholder {
+    height: 100%;
+}
+
+.locator-map .map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.locator-info {
+    flex: 1;
+}
+
+.locator-list {
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-top: 30px;
+}
+
+.locator-item {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.locator-item.active {
+    border-color: var(--color-primary);
+    background: rgba(81, 45, 168, 0.02);
+    box-shadow: 0 4px 12px rgba(81, 45, 168, 0.1);
+}
+
+.locator-details h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.locator-details p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.locator-item .status {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.locator-item .status.open {
+    color: #27ae60;
+}
+
+.locator-item .status.closed {
+    color: #e74c3c;
+}
+
 /* DESIGN RESPONSIVO */
+@media (min-width: 576px) {
+    .flyer-nav {
+        position: static;
+    }
+}
+
 @media (min-width: 768px) {
     .hero-actions {
         flex-direction: row;
@@ -456,7 +679,7 @@ img {
     .top-bar {
         display: block;
     }
-    
+
     .search-bar {
         display: flex;
     }
@@ -503,11 +726,21 @@ img {
     .products-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .locator-wrapper {
+        flex-direction: row-reverse;
+    }
+
+    .locator-info {
+        max-width: 520px;
+    }
 }
 
 /* ANIMAÇÕES */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
